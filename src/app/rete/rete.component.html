@@ -1,0 +1,15 @@
+<button (click)="arrangeNodes()">Arrange Nodes</button>
+<div class="buttons-container flex gap-4">
+  <button (click)="handleAddNode('BLUE', 'fa-solid fa-house')">
+    <i class="fa-solid fa-house"></i> New Node
+  </button>
+  <button class="orange" (click)="handleAddNode('ORANGE', 'fa-solid fa-gears')">
+    <i class="fa-solid fa-gears"></i> New Node
+  </button>
+  <button class="green" (click)="handleAddNode('GREEN', 'fa-solid fa-server')">
+    <i class="fa-solid fa-server"></i> New Node
+  </button>
+</div>
+<div>
+  <div class="rete" #rete></div>
+</div>

@@ -1,0 +1,46 @@
+<div
+  class="node"
+  [class.orange]="color() === 'ORANGE'"
+  [class.green]="color() === 'GREEN'"
+>
+  @if (icon(); as icon) {
+  <i [class]="icon"></i>
+  }
+
+  {{ title() }}
+
+  @for (input of inputs(); track input?.id) {
+  <div class="input" [attr.data-testid]="'input-' + input?.id">
+    <div
+      class="input-socket"
+      refComponent
+      [attr.data]="{
+        type: 'socket',
+        side: 'input',
+        key: input?.id,
+        nodeId: data.id,
+        payload: input?.socket,
+        seed: seed
+      }"
+      [attr.emit]="emit"
+      data-testid="input-socket"
+    ></div>
+  </div>
+  } @for (output of outputs(); track output?.id) {
+  <div class="output" [attr.data-testid]="'output-' + output?.id">
+    <div
+      class="output-socket"
+      data-testid="output-socket"
+      [attr.data]="{
+        type: 'socket',
+        side: 'output',
+        key: output?.id,
+        nodeId: data.id,
+        payload: output?.socket,
+        seed: seed
+      }"
+      [attr.emit]="emit"
+    ></div>
+  </div>
+  }
+</div>

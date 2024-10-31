@@ -1,0 +1,20 @@
+@use "sass:math";
+
+svg {
+  overflow: visible;
+  position: absolute;
+  pointer-events: none;
+
+  path {
+    fill: none;
+    stroke-width: 2px;
+    stroke: rgb(83, 159, 217);
+    pointer-events: auto;
+  }
+
+  &.orange {
+    path {
+      stroke: rgb(248, 120, 49);
+    }
+  }
+}

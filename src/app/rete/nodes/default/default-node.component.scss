@@ -1,0 +1,46 @@
+:host {
+  &.selected {
+    .node {
+      filter: sepia(0.5);
+      cursor: grabbing;
+    }
+  }
+}
+
+.node {
+  @apply border flex gap-2 h-full items-center px-3 rounded-bl-[8px] rounded-tr-[8px] uppercase w-full py-2 px-8;
+  background-color: rgb(210, 236, 255);
+  border-color: rgb(83, 159, 217);
+  color: rgb(83, 159, 217);
+  user-select: none;
+  font-weight: 500;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  cursor: grab;
+
+  i {
+    color: rgb(83, 159, 217);
+  }
+
+  &.orange {
+    background-color: rgb(255, 232, 219);
+    border-color: rgb(248, 120, 49);
+    color: rgb(248, 120, 49);
+
+    i {
+      color: rgb(248, 120, 49);
+    }
+  }
+
+  &.green {
+    background-color: rgb(222, 237, 225);
+    border-color: rgb(35, 157, 62);
+    color: rgb(35, 157, 62);
+
+    i {
+      color: rgb(35, 157, 62);
+    }
+  }
+}

@@ -1,0 +1,4 @@
+<button class="absolute z-50 ml-[200px]" (click)="addNewNode()">Create new Node</button>
+<ngx-reactflow [nodes]="nodes()" [edges]="edges()" [nodeTypes]="nodeTypes" />
+reactflow demo
+<div>{{ nodes().length }} nodes {{ edges().length }} edgess</div>

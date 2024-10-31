@@ -1,0 +1,17 @@
+<main class="h-[100vh] px-2 py-4">
+  <div class="flex flex-row gap-4">
+    <button (click)="handleCurrentFlowChange('foblex')">Foblex</button>
+    <button (click)="handleCurrentFlowChange('reactflow')">React Flow</button>
+    <button (click)="handleCurrentFlowChange('rete')">Rete</button>
+  </div>
+
+  <div class="py-4">
+    @if (currentFlow() == 'foblex') {
+    <app-foblex></app-foblex>
+    } @if (currentFlow() == 'reactflow') {
+    <app-reactflow></app-reactflow>
+    } @if (currentFlow() == 'rete') {
+    <app-rete></app-rete>
+    }
+  </div>
+</main>

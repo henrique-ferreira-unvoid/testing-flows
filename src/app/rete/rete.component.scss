@@ -1,0 +1,67 @@
+.rete {
+  width: 100vw;
+  height: 100vh;
+}
+
+.fill-area {
+  display: table;
+  z-index: -1;
+  position: absolute;
+  top: -320000px;
+  left: -320000px;
+  width: 640000px;
+  height: 640000px;
+}
+
+.background {
+  background-color: #ffffff;
+  opacity: 1;
+  background-image: linear-gradient(#f1f1f1 3.2px, transparent 3.2px),
+    linear-gradient(90deg, #f1f1f1 3.2px, transparent 3.2px),
+    linear-gradient(#f1f1f1 1.6px, transparent 1.6px),
+    linear-gradient(90deg, #f1f1f1 1.6px, #ffffff 1.6px);
+  background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+  background-position: -3.2px -3.2px, -3.2px -3.2px, -1.6px -1.6px,
+    -1.6px -1.6px;
+}
+
+
+.buttons-container {
+  @apply flex gap-4 my-4;
+
+  button {
+    @apply cursor-pointer border flex gap-2 h-full items-center px-3 rounded-bl-[8px] rounded-tr-[8px] uppercase w-full py-2 px-8;
+    background-color: rgb(210, 236, 255);
+    border-color: rgb(83, 159, 217);
+    color: rgb(83, 159, 217);
+    font-weight: 500;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    i {
+      color: rgb(83, 159, 217);
+    }
+
+    &.orange {
+      background-color: rgb(255, 232, 219);
+      border-color: rgb(248, 120, 49);
+      color: rgb(248, 120, 49);
+
+      i {
+        color: rgb(248, 120, 49);
+      }
+    }
+
+    &.green {
+      background-color: rgb(222, 237, 225);
+      border-color: rgb(35, 157, 62);
+      color: rgb(35, 157, 62);
+
+      i {
+        color: rgb(35, 157, 62);
+      }
+    }
+  }
+}
